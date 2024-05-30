@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export const Sidebar = () => {
     return (
         <div>
@@ -9,7 +11,10 @@ export const Sidebar = () => {
                     <div className="links flex flex-col mt-[60px] h-full gap-[50px]">
                         <div>
                             <div className="text-gray-1 text-sm mb-4">Menu</div>
-                            <a href="/" className="side-link active">
+                            <Link
+                                href={route("prototype.dashboard")}
+                                className="side-link active"
+                            >
                                 <svg
                                     width="24"
                                     height="24"
@@ -27,7 +32,7 @@ export const Sidebar = () => {
                                     </g>
                                 </svg>
                                 Discover
-                            </a>
+                            </Link>
                             <a href="#!" className="side-link">
                                 <svg
                                     width="24"
@@ -81,7 +86,10 @@ export const Sidebar = () => {
                             <div className="text-gray-1 side-link mb-4">
                                 Others
                             </div>
-                            <a href="pricing.html" className="side-link">
+                            <Link
+                                href={route("prototype.subscriptionPlan")}
+                                className="side-link"
+                            >
                                 <svg
                                     width="24"
                                     height="24"
@@ -96,7 +104,7 @@ export const Sidebar = () => {
                                     />
                                 </svg>
                                 Payments
-                            </a>
+                            </Link>
                             <a href="#!" className="side-link">
                                 <svg
                                     width="24"
