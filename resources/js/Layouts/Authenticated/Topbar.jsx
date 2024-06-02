@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import { useState, useRef } from "react";
 
-export const Topbar = () => {
+export const Topbar = ({ name }) => {
     const [dropdownOpen, setDropdownOpen] = useState(true);
     const dropdownTarget = useRef();
 
@@ -23,7 +23,7 @@ export const Topbar = () => {
             />
             <div className="flex items-center gap-4">
                 <span className="text-black text-sm font-medium">
-                    Welcome, Ziyad
+                    Welcome, {name}
                 </span>
                 <div className="collapsible-dropdown flex flex-col gap-2 relative">
                     <div
